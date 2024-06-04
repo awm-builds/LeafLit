@@ -10,14 +10,22 @@
 <body>
   <header class="navbar-fixed">
     <nav>
-      <div class="nav-wrapper">
-        <ul>
-          <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Leaf Lit</a></li>
-        </ul>
-        <ul class="right">
-          <li><a href="/about">About</a></li>
-        </ul>
-      </div>
+      <ul class="right">
+        <!-- changes below -->
+        {% if user.is_authenticated %}
+          <li>
+            <a href="#">
+              <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="submit-link">Log Out</button>
+              </form>
+            </a>
+          </li>
+        {% else %}
+          <li><a href="{% url 'signup' %}">Sign Up</a></li>
+          <li><a href="{% url 'login' %}">Log In</a></li>
+        {% endif %}
+      </ul>
     </nav>
   </header>
   <main class="container">

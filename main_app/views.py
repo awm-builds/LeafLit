@@ -28,3 +28,16 @@ def signup(request):
   form = UserCreationForm()
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
+
+def books(request):
+  # Include an .html file extension - unlike when rendering EJS templates
+  return render(request, 'books.html')
+
+def tea(request):
+  # Include an .html file extension - unlike when rendering EJS templates
+  return render(request, 'tea.html')
+
+def discussion(request):
+  # Include an .html file extension - unlike when rendering EJS templates
+  return render(request, 'discussion.html')
+

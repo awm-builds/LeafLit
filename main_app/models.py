@@ -4,7 +4,6 @@ from django.db import models
 # Book Model
 class Book(models.Model):
     API_ID = models.CharField(max_length=250)
-    book_id = models.IntegerField()
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
@@ -12,5 +11,4 @@ class Book(models.Model):
 
     def __str__(self):
         return self.name
-
 

@@ -1,9 +1,12 @@
+import os
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 import requests
 
 # Create your views here.
+
+API_KEY = os.environ['API_KEY']
 
 # View functions pull from models
 # Define the home view
@@ -43,5 +46,7 @@ def discussion(request):
   return render(request, 'discussion.html')
 
 def book_search(request):
-  response = requests.get(' https://www.googleapis.com/books/v1/volumes?q=intitle:{UserInput}&key={ourAPIKey}')
-  return render(request, 'search_results.html', response.json())
+  search = request.GET.get('search')
+  response = requests.get(f'https://www.googleapis.com/books/v1/volumes?q=intitle:{search}&key={API_KEY}')
+  data = response.json()
+  return render(request, 'book_search_results.html', {'book_results': data})

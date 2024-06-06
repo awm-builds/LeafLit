@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+import requests
 
 # Create your views here.
 
@@ -41,3 +42,6 @@ def discussion(request):
   # Include an .html file extension - unlike when rendering EJS templates
   return render(request, 'discussion.html')
 
+def book_search(request):
+  response = requests.get(' https://www.googleapis.com/books/v1/volumes?q=intitle:{UserInput}&key={ourAPIKey}')
+  return render(request, 'search_results.html', response.json())

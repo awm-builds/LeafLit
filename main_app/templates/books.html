@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>About Leaf Lit Books!</h1>
-<hr>
-<p>Join Leaf Lit!</p>
+<form action="{% url 'book_search' %}" method='GET'>
+    <input type="search" name="search">
+    <button type="submit">Search</button>
+</form>
 
 {% endblock %}

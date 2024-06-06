@@ -1,7 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 
+{{book_results|length}}
+
 <h1>Search Results</h1>
-{{book_results}}
+{% for book in book_results %}
+<article>
+    <h3>{{book.volumeInfo.title}}</h3>
+    <p>Author{{book.volumeInfo.authors|pluralize}}: {{book.volumeInfo.authors|join:", "}}</p>
+</article>
+{% endfor %}
 
 {% endblock %}

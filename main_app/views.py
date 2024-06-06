@@ -48,5 +48,5 @@ def discussion(request):
 def book_search(request):
   search = request.GET.get('search')
   response = requests.get(f'https://www.googleapis.com/books/v1/volumes?q=intitle:{search}&key={API_KEY}')
-  data = response.json()
+  data = response.json()['items']
   return render(request, 'book_search_results.html', {'book_results': data})

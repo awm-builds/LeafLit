@@ -3,10 +3,10 @@
 {% block content %}
 <h1>{{ book.title }}</h1>
 <p>Author: {{ book.author }}</p>
-<p>Description: {{ book.description }}</p>
+<p>Description: {{ book.description|safe }}</p>
 <p>Page Count: {{ book.page_count }}</p>
-<p>Book Cover: <img href="{{ book.image }}" alt="book cover"/></p>
+<p><img src="{{ book.image }}" alt="book cover"/></p>
 
-<a href="{% url 'books' %}">Back to All books</a>
+<a href="{% url 'books' %}">Back to All Books</a>
 
 {% endblock %}

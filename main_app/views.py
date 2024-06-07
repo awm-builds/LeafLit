@@ -36,11 +36,11 @@ def signup(request):
 
 def books(request):
   # Include an .html file extension - unlike when rendering EJS templates
-  return render(request, 'books.html')
+  return render(request, 'books/books.html')
 
 def tea(request):
-  # Include an .html file extension - unlike when rendering EJS templates
-  return render(request, 'tea.html')
+  teas = Tea.objects.all()
+  return render(request, 'tea/tea.html', {'teas':teas})
 
 def discussion(request):
   # Include an .html file extension - unlike when rendering EJS templates
@@ -50,7 +50,12 @@ def book_search(request):
   search = request.GET.get('search')
   response = requests.get(f'https://www.googleapis.com/books/v1/volumes?q=intitle:{search}&key={API_KEY}')
   data = response.json()['items']
-  return render(request, 'book_search_results.html', {'book_results': data})
+  return render(request, 'books/book_search_results.html', {'book_results': data})
+
+def tea_search(request):
+  search = request.GET.get('search')
+  teas = Tea.objects.filter(name_icontains=search)
+  return render(request, 'tea/tea_search_results.html', {'tea_results': teas})
 
 def book_detail(request, api_id):
   book = Book.objects.filter(api_id=api_id)
@@ -67,9 +72,15 @@ def book_detail(request, api_id):
       title=data['title'],
       author=', '.join(data['authors']),
       description=data['description'],
-      image=data['imageLinks']['medium'],
+      image=data['imageLinks']['thumbnail'],
       page_count=data['pageCount'],
     )
   return render(request, 'books/details.html', {
     'book': book,
+  })
+
+def tea_detail(request, tea_id):
+  tea = get_object_or_404(Tea, id=tea_id)
+  return render(request, 'tea/details.html', {
+    'tea': tea,
   })

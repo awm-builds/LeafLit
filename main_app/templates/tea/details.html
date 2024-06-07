@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ tea.name }}</h1>
+<p>Type: {{ tea.type }}</p>
+<p>Description: {{ tea.description }}</p>
+<p>Tea Image: <img src="{{ tea.image }}" alt="tea image"/></p>
+
+<a href="{% url 'tea' %}">Back to All Tea</a>
+
+{% endblock %}

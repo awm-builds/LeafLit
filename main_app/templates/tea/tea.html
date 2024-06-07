@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<!-- 
+    Tea index listing teas; flexbox/cards; filter by type
+Dropdowns that filter options (ie, Type of tea -> Tea Name) -->
+
+<!-- <form action="{% url 'tea_search' %}" method='GET'>
+    <input type="search" name="search">
+    <button type="submit">Search</button>
+</form> -->
+
+<h1>Tea List</h1>
+<ul>
+    {% for tea in teas %}
+        <li><a href="{% url 'tea_detail' tea.id %}">{{ tea.name }}</a></li>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}

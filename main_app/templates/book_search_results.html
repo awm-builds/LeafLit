@@ -8,6 +8,7 @@
 <article>
     <h3>{{book.volumeInfo.title}}</h3>
     <p>Author{{book.volumeInfo.authors|pluralize}}: {{book.volumeInfo.authors|join:", "}}</p>
+    <a href="{% url 'book_detail' book.id %}"><button>Details</button></a>
 </article>
 {% endfor %}
 

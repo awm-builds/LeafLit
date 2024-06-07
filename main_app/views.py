@@ -1,4 +1,5 @@
 import os
+from .models import Book
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
@@ -50,3 +51,25 @@ def book_search(request):
   response = requests.get(f'https://www.googleapis.com/books/v1/volumes?q=intitle:{search}&key={API_KEY}')
   data = response.json()['items']
   return render(request, 'book_search_results.html', {'book_results': data})
+
+def book_detail(request, api_id):
+  book = Book.objects.filter(api_id=api_id)
+  if len(book):
+    book = book[0]
+  else:
+    # Look up book from API
+    response = requests.get(f'https://www.googleapis.com/books/v1/volumes/{api_id}?key={API_KEY}')
+    print(response.json())
+    data = response.json()['volumeInfo']
+    # Add book to database
+    book = Book.objects.create(
+      api_id=api_id,
+      title=data['title'],
+      author=', '.join(data['authors']),
+      description=data['description'],
+      image=data['imageLinks']['medium'],
+      page_count=data['pageCount'],
+    )
+  return render(request, 'books/details.html', {
+    'book': book,
+  })

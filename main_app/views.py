@@ -1,8 +1,9 @@
 import os
-from .models import Book
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from .models import Book, Tea, Thread, Comment
+from .forms import ThreadForm, CommentForm
 import requests
 
 # Create your views here.
@@ -43,8 +44,8 @@ def tea(request):
   return render(request, 'tea/tea.html', {'teas':teas})
 
 def discussion(request):
-  # Include an .html file extension - unlike when rendering EJS templates
-  return render(request, 'discussion.html')
+    threads = Thread.objects.all().order_by('-created_at')
+    return render(request, 'discussion/discussion.html', {'threads': threads})
 
 def book_search(request):
   search = request.GET.get('search')
@@ -84,3 +85,77 @@ def tea_detail(request, tea_id):
   return render(request, 'tea/details.html', {
     'tea': tea,
   })
+
+def thread_detail(request, thread_id):
+    thread = get_object_or_404(Thread, pk=thread_id)
+    comments = thread.comments.all().order_by('-created_at')
+    if request.method == 'POST':
+        comment_form = CommentForm(request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.thread = thread
+            comment.user = request.user
+            comment.save()
+            return redirect('thread_detail', thread_id=thread.pk)
+    else:
+        comment_form = CommentForm()
+    
+    return render(request, 'discussion/thread_detail.html', {
+        'thread': thread,
+        'comments': comments,
+        'comment_form': comment_form
+    })
+
+def new_thread(request):
+    if request.method == 'POST':
+        thread_form = ThreadForm(request.POST)
+        if thread_form.is_valid():
+            thread = thread_form.save(commit=False)
+            thread.user = request.user
+            thread.save()
+            return redirect('discussion')
+    else:
+        thread_form = ThreadForm()
+    return render(request, 'discussion/thread_form.html', {'thread_form': thread_form})
+
+def comment_detail(request, pk):
+    comment = get_object_or_404(Comment, pk=pk)
+    return render(request, 'discussion/comment_detail.html', {'comment': comment})
+
+def add_comment(request, thread_id):
+    thread = get_object_or_404(Thread, pk=thread_id)
+    if request.method == 'POST':
+        comment_form = CommentForm(request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.thread = thread
+            comment.user = request.user
+            comment.save()
+            return redirect('thread_detail', thread_id=thread.pk)
+    else:
+        comment_form = CommentForm()
+    return render(request, 'discussion/comment_form.html', {'comment_form': comment_form, 'thread': thread})
+
+def edit_comment(request, pk):
+    comment = get_object_or_404(Comment, pk=pk)
+    if request.method == 'POST':
+        comment_form = CommentForm(request.POST, instance=comment)
+        if comment_form.is_valid():
+            comment_form.save()
+            return redirect('thread_detail', thread_id=comment.thread.pk)
+    else:
+        comment_form = CommentForm(instance=comment)
+    return render(request, 'discussion/comment_form.html', {'comment_form': comment_form, 'comment': comment})
+
+def delete_comment(request, pk):
+    comment = get_object_or_404(Comment, pk=pk)
+    if request.method == 'POST':
+        thread_pk = comment.thread.pk
+        comment.delete()
+        return redirect('thread_detail', thread_id=thread_pk)
+    comment_form = CommentForm(instance=comment)
+    return render(request, 'discussion/comment_form.html', {
+        'comment_form': comment_form,
+        'comment': comment,
+        'is_delete': True
+    })

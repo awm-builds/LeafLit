@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ thread.title }}</h1>
+  <p>{{ thread.description }}</p>
+  <p>Created by {{ thread.author }} on {{ thread.created_at }}</p>
+
+  <h2>Comments</h2>
+  <ul>
+    {% for comment in comments %}
+      <li>
+        <p>{{ comment.comment }}</p>
+        <p>by {{ comment.user }} on {{ comment.created_at }}</p>
+        <a href="{% url 'comment_detail' comment.pk %}">View Comment</a> |
+        <a href="{% url 'edit_comment' comment.pk %}">Edit</a> |
+        <a href="{% url 'delete_comment' comment.pk %}">Delete</a>
+      </li>
+    {% empty %}
+      <li>No comments yet. Be the first to comment!</li>
+    {% endfor %}
+  </ul>
+
+  <h2>Add a Comment</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ comment_form.as_p }}
+    <button type="submit" class="btn">Add Comment</button>
+  </form>
+{% endblock %}

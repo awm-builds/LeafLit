@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Discussion Board</h1>
+
+<a href="{% url 'new_thread' %}">New Thread</a>
+
+<article>
+    <ul>
+        {% for thread in threads %}
+            <li>
+                <a href="{% url 'thread_detail' thread.id %}">{{ thread.title }}</a>
+                by {{ thread.user.username }}
+                (Last updated: {{ thread.last_updated|date:"Y-m-d H:i:s" }})
+            </li>
+        {% endfor %}
+    </ul>
+</article>
+
+{% endblock %}

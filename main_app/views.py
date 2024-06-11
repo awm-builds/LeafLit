@@ -1,5 +1,6 @@
 import os
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from .models import Book, Tea, Thread, Comment
@@ -40,8 +41,13 @@ def books(request):
   return render(request, 'books/books.html')
 
 def tea(request):
-  teas = Tea.objects.all()
-  return render(request, 'tea/tea.html', {'teas':teas})
+    tea_type = request.GET.get('type')  # Get the selected tea type from the GET request
+    if tea_type:
+        teas = Tea.objects.filter(type=tea_type)  # Filter teas by the selected type
+    else:
+        teas = Tea.objects.all()  # If no type is selected, display all teas
+    tea_types = Tea.objects.values_list('type', flat=True).distinct()  # Get all unique tea types for the filter dropdown
+    return render(request, 'tea/tea.html', {'teas': teas, 'tea_types': tea_types, 'tea_type': tea_type})
 
 def discussion(request):
     threads = Thread.objects.all().order_by('-created_at')
@@ -106,6 +112,7 @@ def thread_detail(request, thread_id):
         'comment_form': comment_form
     })
 
+@login_required
 def new_thread(request):
     if request.method == 'POST':
         thread_form = ThreadForm(request.POST)
@@ -118,10 +125,12 @@ def new_thread(request):
         thread_form = ThreadForm()
     return render(request, 'discussion/thread_form.html', {'thread_form': thread_form})
 
+@login_required
 def comment_detail(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     return render(request, 'discussion/comment_detail.html', {'comment': comment})
 
+@login_required
 def add_comment(request, thread_id):
     thread = get_object_or_404(Thread, pk=thread_id)
     if request.method == 'POST':
@@ -136,6 +145,7 @@ def add_comment(request, thread_id):
         comment_form = CommentForm()
     return render(request, 'discussion/comment_form.html', {'comment_form': comment_form, 'thread': thread})
 
+@login_required
 def edit_comment(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     if request.method == 'POST':
@@ -147,6 +157,7 @@ def edit_comment(request, pk):
         comment_form = CommentForm(instance=comment)
     return render(request, 'discussion/comment_form.html', {'comment_form': comment_form, 'comment': comment})
 
+@login_required
 def delete_comment(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     if request.method == 'POST':

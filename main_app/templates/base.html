@@ -14,7 +14,6 @@
         <li><a href="{% url 'home' %}">Leaf Lit</a></li>
       </ul>
       <ul>
-      <!-- changes below -->
       {% if user.is_authenticated %}
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'books' %}">Books</a></li>
@@ -25,7 +24,6 @@
       {% endif %}
       </ul>
       <ul class="right">
-        <!-- changes below -->
         {% if user.is_authenticated %}
           <li>
             <a href="#">
@@ -40,27 +38,6 @@
           <li><a href="{% url 'login' %}">Log In</a></li>
         {% endif %}
       </ul>
-<!--
-      <ul>
-        <li><a href="{% url 'home' %}" class="left brand-logo">Leaf Lit</a></li>
-      </ul>
-      <ul class="right">
-        !-- changes below --
-        {% if user.is_authenticated %}
-          <li>
-            <a href="#">
-              <form method="post" action="{% url 'logout' %}">
-                {% csrf_token %}
-                <button type="submit" class="submit-link">Log Out</button>
-              </form>
-            </a>
-          </li>
-        {% else %}
-          <li><a href="{% url 'signup' %}">Sign Up</a></li>
-          <li><a href="{% url 'login' %}">Log In</a></li>
-        {% endif %}
-      </ul>
-    -->
     </nav>
   </header>
   <main class="container">

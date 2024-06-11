@@ -1,0 +1,10 @@
+<!-- discussion/comment_detail.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Comment by {{ comment.user }}</h1>
+  <p>{{ comment.comment }}</p>
+  <p>Posted on: {{ comment.created_at }}</p>
+  <p>In thread: <a href="{% url 'thread_detail' comment.thread.pk %}">{{ comment.thread.title }}</a></p>
+  <a href="{% url 'thread_detail' comment.thread.pk %}">Back to Thread</a>
+{% endblock %}

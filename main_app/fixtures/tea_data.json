@@ -1,0 +1,502 @@
+[
+    {
+        "model": "main_app.tea",
+        "pk": 1,
+        "fields": {
+            "name": "Sencha",
+            "type": "Green",
+            "description": "A popular Japanese green tea known for its refreshing flavor and high antioxidants.",
+            "image_url": "http://example.com/sencha.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 2,
+        "fields": {
+            "name": "Matcha",
+            "type": "Green",
+            "description": "A finely ground powder of specially grown and processed green tea leaves.",
+            "image_url": "http://example.com/matcha.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 3,
+        "fields": {
+            "name": "Gyokuro",
+            "type": "Green",
+            "description": "A type of shaded green tea from Japan known for its sweet and mild flavor.",
+            "image_url": "http://example.com/gyokuro.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 4,
+        "fields": {
+            "name": "Longjing",
+            "type": "Green",
+            "description": "A Chinese green tea also known as Dragon Well, celebrated for its high quality and delicate taste.",
+            "image_url": "http://example.com/longjing.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 5,
+        "fields": {
+            "name": "Bi Luo Chun",
+            "type": "Green",
+            "description": "A Chinese green tea known for its floral aroma and rich taste.",
+            "image_url": "http://example.com/biluochun.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 6,
+        "fields": {
+            "name": "Earl Grey",
+            "type": "Black",
+            "description": "A black tea blend flavored with bergamot oil, known for its distinctive citrus flavor.",
+            "image_url": "http://example.com/earlgrey.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 7,
+        "fields": {
+            "name": "Darjeeling",
+            "type": "Black",
+            "description": "A fine black tea from India, known for its light, floral aroma and delicate flavor.",
+            "image_url": "http://example.com/darjeeling.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 8,
+        "fields": {
+            "name": "Assam",
+            "type": "Black",
+            "description": "A robust and malty black tea from the Assam region of India.",
+            "image_url": "http://example.com/assam.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 9,
+        "fields": {
+            "name": "Ceylon",
+            "type": "Black",
+            "description": "A bright and bold black tea from Sri Lanka.",
+            "image_url": "http://example.com/ceylon.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 10,
+        "fields": {
+            "name": "Keemun",
+            "type": "Black",
+            "description": "A Chinese black tea known for its fruity flavor and floral aroma.",
+            "image_url": "http://example.com/keemun.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 11,
+        "fields": {
+            "name": "Jasmine Green Tea",
+            "type": "Green",
+            "description": "A Chinese green tea scented with jasmine blossoms.",
+            "image_url": "http://example.com/jasmine_green_tea.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 12,
+        "fields": {
+            "name": "Hojicha",
+            "type": "Green",
+            "description": "A roasted Japanese green tea with a toasty, nutty flavor.",
+            "image_url": "http://example.com/hojicha.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 13,
+        "fields": {
+            "name": "Genmaicha",
+            "type": "Green",
+            "description": "A Japanese green tea combined with roasted brown rice, known as 'popcorn tea'.",
+            "image_url": "http://example.com/genmaicha.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 14,
+        "fields": {
+            "name": "Oolong",
+            "type": "Oolong",
+            "description": "A traditional Chinese tea with a flavor profile between green and black tea.",
+            "image_url": "http://example.com/oolong.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 15,
+        "fields": {
+            "name": "Tie Guan Yin",
+            "type": "Oolong",
+            "description": "Also known as Iron Goddess of Mercy, a premium Chinese oolong tea.",
+            "image_url": "http://example.com/tieguanyin.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 16,
+        "fields": {
+            "name": "Dong Ding",
+            "type": "Oolong",
+            "description": "A Taiwanese oolong tea known for its complex flavor and aroma.",
+            "image_url": "http://example.com/dongding.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 17,
+        "fields": {
+            "name": "Milk Oolong",
+            "type": "Oolong",
+            "description": "An oolong tea from Taiwan with a creamy and smooth flavor.",
+            "image_url": "http://example.com/milkoolong.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 18,
+        "fields": {
+            "name": "Pu-erh",
+            "type": "Pu-erh",
+            "description": "A fermented tea from China known for its unique aging process and earthy flavor.",
+            "image_url": "http://example.com/puerh.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 19,
+        "fields": {
+            "name": "Rooibos",
+            "type": "Herbal",
+            "description": "A caffeine-free herbal tea from South Africa, also known as red bush tea.",
+            "image_url": "http://example.com/rooibos.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 20,
+        "fields": {
+            "name": "Chamomile",
+            "type": "Herbal",
+            "description": "A caffeine-free herbal tea known for its calming properties.",
+            "image_url": "http://example.com/chamomile.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 21,
+        "fields": {
+            "name": "Peppermint",
+            "type": "Herbal",
+            "description": "A caffeine-free herbal tea with a refreshing mint flavor.",
+            "image_url": "http://example.com/peppermint.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 22,
+        "fields": {
+            "name": "Hibiscus",
+            "type": "Herbal",
+            "description": "A tart and tangy herbal tea made from hibiscus flowers.",
+            "image_url": "http://example.com/hibiscus.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 23,
+        "fields": {
+            "name": "Yerba Mate",
+            "type": "Herbal",
+            "description": "A caffeinated herbal tea from South America, known for its energizing effects.",
+            "image_url": "http://example.com/yerbamate.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 24,
+        "fields": {
+            "name": "Chai",
+            "type": "Black",
+            "description": "A spiced tea from India made with black tea, milk, and a blend of spices.",
+            "image_url": "http://example.com/chai.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 25,
+        "fields": {
+            "name": "Lapsang Souchong",
+            "type": "Black",
+            "description": "A Chinese black tea known for its smoky flavor.",
+            "image_url": "http://example.com/lapsangsouchong.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 26,
+        "fields": {
+            "name": "White Peony",
+            "type": "White",
+            "description": "A Chinese white tea made from young leaves and buds.",
+            "image_url": "http://example.com/whitepeony.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 27,
+        "fields": {
+            "name": "Silver Needle",
+            "type": "White",
+            "description": "A premium white tea from China made from young tea buds.",
+            "image_url": "http://example.com/silverneedle.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 28,
+        "fields": {
+            "name": "Golden Monkey",
+            "type": "Black",
+            "description": "A Chinese black tea known for its sweet and malty flavor.",
+            "image_url": "http://example.com/goldenmonkey.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 29,
+        "fields": {
+            "name": "Honeybush",
+            "type": "Herbal",
+            "description": "A caffeine-free herbal tea from South Africa with a sweet, honey-like flavor.",
+            "image_url": "http://example.com/honeybush.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 30,
+        "fields": {
+            "name": "Rosehip",
+            "type": "Herbal",
+            "description": "A tart and tangy herbal tea made from the fruit of the rose plant.",
+            "image_url": "http://example.com/rosehip.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 31,
+        "fields": {
+            "name": "Lemon Balm",
+            "type": "Herbal",
+            "description": "A calming herbal tea with a light lemon flavor.",
+            "image_url": "http://example.com/lemonbalm.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 32,
+        "fields": {
+            "name": "Lemongrass",
+            "type": "Herbal",
+            "description": "A refreshing herbal tea with a citrus flavor, made from the leaves of the lemongrass plant.",
+            "image_url": "http://example.com/lemongrass.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 33,
+        "fields": {
+            "name": "Spearmint",
+            "type": "Herbal",
+            "description": "A minty herbal tea known for its digestive benefits.",
+            "image_url": "http://example.com/spearmint.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 34,
+        "fields": {
+            "name": "Sage",
+            "type": "Herbal",
+            "description": "An herbal tea with a savory, slightly peppery flavor.",
+            "image_url": "http://example.com/sage.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 35,
+        "fields": {
+            "name": "Thyme",
+            "type": "Herbal",
+            "description": "An herbal tea with a subtle, earthy flavor, known for its respiratory benefits.",
+            "image_url": "http://example.com/thyme.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 36,
+        "fields": {
+            "name": "Ginger",
+            "type": "Herbal",
+            "description": "A spicy and warming herbal tea known for its digestive benefits.",
+            "image_url": "http://example.com/ginger.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 37,
+        "fields": {
+            "name": "Tulsi",
+            "type": "Herbal",
+            "description": "Also known as Holy Basil, a herbal tea from India known for its stress-relieving properties.",
+            "image_url": "http://example.com/tulsi.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 38,
+        "fields": {
+            "name": "Butterfly Pea Flower",
+            "type": "Herbal",
+            "description": "A caffeine-free herbal tea known for its vivid blue color and antioxidant properties.",
+            "image_url": "http://example.com/butterflypeaflower.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 39,
+        "fields": {
+            "name": "Ginseng",
+            "type": "Herbal",
+            "description": "An herbal tea known for its energizing and immune-boosting properties.",
+            "image_url": "http://example.com/ginseng.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 40,
+        "fields": {
+            "name": "Soursop",
+            "type": "Herbal",
+            "description": "A tropical herbal tea known for its sweet and tangy flavor.",
+            "image_url": "http://example.com/soursop.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 41,
+        "fields": {
+            "name": "Moringa",
+            "type": "Herbal",
+            "description": "A highly nutritious herbal tea known for its numerous health benefits.",
+            "image_url": "http://example.com/moringa.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 42,
+        "fields": {
+            "name": "Burdock Root",
+            "type": "Herbal",
+            "description": "An earthy herbal tea known for its detoxifying properties.",
+            "image_url": "http://example.com/burdockroot.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 43,
+        "fields": {
+            "name": "Dandelion Root",
+            "type": "Herbal",
+            "description": "An earthy herbal tea known for its liver detox benefits.",
+            "image_url": "http://example.com/dandelionroot.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 44,
+        "fields": {
+            "name": "Nettle",
+            "type": "Herbal",
+            "description": "An herbal tea known for its anti-inflammatory properties.",
+            "image_url": "http://example.com/nettle.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 45,
+        "fields": {
+            "name": "Fennel",
+            "type": "Herbal",
+            "description": "A slightly sweet herbal tea known for its digestive benefits.",
+            "image_url": "http://example.com/fennel.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 46,
+        "fields": {
+            "name": "Licorice Root",
+            "type": "Herbal",
+            "description": "A sweet and slightly spicy herbal tea known for its soothing properties.",
+            "image_url": "http://example.com/licoriceroot.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 47,
+        "fields": {
+            "name": "Echinacea",
+            "type": "Herbal",
+            "description": "An herbal tea known for its immune-boosting properties.",
+            "image_url": "http://example.com/echinacea.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 48,
+        "fields": {
+            "name": "Red Clover",
+            "type": "Herbal",
+            "description": "A sweet and slightly floral herbal tea known for its detoxifying properties.",
+            "image_url": "http://example.com/redclover.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 49,
+        "fields": {
+            "name": "Oolong",
+            "type": "Oolong",
+            "description": "A traditional Chinese tea with a flavor profile between green and black tea.",
+            "image_url": "http://example.com/oolong.jpg"
+        }
+    },
+    {
+        "model": "main_app.tea",
+        "pk": 50,
+        "fields": {
+            "name": "Lavender",
+            "type": "Herbal",
+            "description": "A floral herbal tea known for its calming properties.",
+            "image_url": "http://example.com/lavender.jpg"
+        }
+    }
+]

@@ -4,8 +4,8 @@
 <h1>{{ tea.name }}</h1>
 <p>Type: {{ tea.type }}</p>
 <p>Description: {{ tea.description }}</p>
-<p>Tea Image: <img src="{{ tea.image }}" alt="tea image"/></p>
+<p><img src="{{ tea.image }}" alt="tea image"/></p>
 
-<a href="{% url 'tea' %}">Back to All Tea</a>
+<a href="{% url 'tea' %}" style="color: #DDA84F;">Back to All Tea</a>
 
 {% endblock %}

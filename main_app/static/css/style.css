@@ -1,0 +1,66 @@
+body {
+    background-color: #261D09;
+    color: #F0DDAB;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li {
+    color: #F0DDAB;
+}
+
+a {
+    color: #DDA84F;
+}
+
+.select-dropdown.dropdown-trigger {
+    color: white
+}
+
+svg.caret {
+    fill: white
+}
+
+.container a:hover {
+    background-color: rgba(240, 221, 171, 0.5);
+}
+
+.home-page {
+    background-image: url('/static/images/cowboy.jpg');
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    /* height: 100vh;
+    width: 100%; */
+}
+
+.nav-wrapper {
+    background-color: rgba(240, 221, 171, 0.7);
+}
+
+.heading {
+    font-size: 20px; 
+}
+
+footer {
+    background-color: rgba(240, 221, 171, 0.7);
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    /* z-index: -100; */
+}
+
+footer p {
+    color: white;
+}
+
+.tea-card {
+    background-color: #B64129;
+    border-radius: 10px;
+    border: 2px solid #F0DDAB;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.tea-card:hover {
+    background-color: rgba(240, 221, 171, 0.3);
+    
+}

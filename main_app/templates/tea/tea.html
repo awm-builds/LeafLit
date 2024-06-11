@@ -13,10 +13,11 @@
         <label>Filter by Type</label>
       </div>
     </form>
-
+  </div>
+  <div class="container">
     <div class="row">
       {% for tea in teas %}
-        <div class="col s12 m6 l4">
+        <div class="col s4 m4">
           <a href="{% url 'tea_detail' tea.id %}" class="card-link">
             <div class="card tea-card" style="background-color: #B64129;">
               <div class="card-image" style="color: #DDA84F;">
@@ -32,4 +33,5 @@
       {% endfor %}
     </div>
   </div>
+  
 {% endblock %}

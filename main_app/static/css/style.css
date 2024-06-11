@@ -53,6 +53,7 @@ footer p {
 }
 
 .tea-card {
+    max-height: 430px;
     background-color: #B64129;
     border-radius: 10px;
     border: 2px solid #F0DDAB;
@@ -63,4 +64,8 @@ footer p {
 .tea-card:hover {
     background-color: rgba(240, 221, 171, 0.3);
     
+}
+
+.card-content {
+    min-height: 160px;
 }

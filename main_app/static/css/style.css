@@ -19,18 +19,36 @@ svg.caret {
     fill: white
 }
 
+body:has(.home-page) {
+    background-image: url('/static/images/icons.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+
+body:has(.book_search_page) {
+    background-image: url('/static/images/background_bunnies.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+
+
+
 .container a:hover {
     background-color: rgba(240, 221, 171, 0.5);
 }
 
-.home-page {
-    background-image: url('/static/images/cowboy.jpg');
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
-    /* height: 100vh;
-    width: 100%; */
-}
+/* .home-page {
+    
+    /* height: 100vh; */
+    /* width: 100%;
+} */ 
 
 .nav-wrapper {
     background-color: rgba(240, 221, 171, 0.7);

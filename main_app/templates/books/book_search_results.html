@@ -4,11 +4,16 @@
 <h1>Search Results</h1>
 <section class="book_search_page">
 {% for book in book_results %}
-<article>
-    <h3>{{book.volumeInfo.title}}</h3>
-    <p>Author{{book.volumeInfo.authors|pluralize}}: {{book.volumeInfo.authors|join:", "}}</p>
-    <a href="{% url 'book_detail' book.id %}"><button>Details</button></a>
-</article>
+<div class=""container">
+    <div class="col s6 offset-s6 book-card">
+        <article>
+            <h4 style="margin: 0">{{book.volumeInfo.title}}</h4>
+            <p>Author{{book.volumeInfo.authors|pluralize}}: {{book.volumeInfo.authors|join:", "}}</p>
+            <a href="{% url 'book_detail' book.id %}"><button class="waves-effect waves-light btn">Details</button></a>
+            <img src="{{ book.volumeInfo.imageLinks.thumbnail }}" alt="Book Thumbnail">
+        </article>
+    </div>
+</div>
 {% endfor %}
 </section>
 

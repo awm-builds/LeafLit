@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<form action="{% url 'book_search' %}" method='GET'>
-    <input type="search" name="search" style="color: #F0DDAB;">
-    <button type="submit">Search</button>
-</form>
-
+<section class="book_page">
+    <form action="{% url 'book_search' %}" method='GET'>
+        <input type="search" name="search" style="color: #F0DDAB;">
+        <button class="waves-effect waves-light btn" type="submit">Search</button>
+    </form>
+</section>
 {% endblock %}

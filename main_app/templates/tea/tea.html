@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<section class="tea_page">
   <div class="container">
     <h1>Tea List</h1>
     <form method="GET" action="{% url 'tea' %}">
@@ -33,5 +34,5 @@
       {% endfor %}
     </div>
   </div>
-  
+</section>
 {% endblock %}

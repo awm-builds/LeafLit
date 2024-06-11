@@ -3,13 +3,13 @@
 
 <h1>Discussion Board</h1>
 
-<a href="{% url 'new_thread' %}">New Thread</a>
+<a href="{% url 'new_thread' %}" style="color: #DDA84F;">New Thread</a>
 
 <article>
     <ul>
         {% for thread in threads %}
             <li>
-                <a href="{% url 'thread_detail' thread.id %}">{{ thread.title }}</a>
+                <a href="{% url 'thread_detail' thread.id %}" style="color: #DDA84F;">{{ thread.title }}</a>
                 by {{ thread.user.username }}
                 (Last updated: {{ thread.last_updated|date:"Y-m-d H:i:s" }})
             </li>

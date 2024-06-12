@@ -1,12 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>{% if thread_form.instance.pk %}Edit{% else %}Create{% endif %} Thread</h1>
+  <h3>{% if thread_form.instance.pk %}Edit{% else %}Create{% endif %} Thread</h3>
   <form method="post">
     {% csrf_token %}
-    <div style="color: #F0DDAB;">
-      {{ thread_form.as_p }}
-    </div>
+    {{ thread_form.as_p }}
     <button type="submit" class="waves-effect waves-light btn">{% if thread_form.instance.pk %}Save{% else %}Create{% endif %} Thread</button>
     <a href="{% url 'discussion' %}"><button class="waves-effect waves-light btn">Cancel</button></a>
   </form>

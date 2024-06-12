@@ -10,15 +10,21 @@
   <title>Leaf Lit</title>
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header class="navbar-fixed">
     <nav class="nav-wrapper">
       <ul class="left">
-        <li><a href="{% url 'home' %}">Leaf Lit</a></li>
+        <li><a href="{% url 'home' %}" style="font-size: 40px; font-family: 'Lily Script One', system-ui;">Leaf Lit</a></li>
       </ul>
-      <ul>
+      <ul class="center-nav">
         {% if user.is_authenticated %}
         <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'books' %}">Books</a></li>
@@ -49,10 +55,8 @@
     {% block content %}
     {% endblock %}
   </main>
-  <footer class="footer white-text" >
-    <div class="container">
+  <footer class="footer white-text">
       <p class="right-align">All Rights Reserved, &copy; 2024 Leaf Lit &nbsp;</p>
-    </div>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>

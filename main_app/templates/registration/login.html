@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<h1>Log In</h1>
-<!-- Add the login form -->
-<form method="POST" action="{% url 'login' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="hidden" name="next" value="{{ next }}" style="color: #F0DDAB;">
-    <button type="submit" class="btn">Log In</button>
-  </form>
-
+<section class="login_page">
+  <h4>Log In</h4>
+  <!-- Add the login form -->
+  <form method="POST" action="{% url 'login' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="hidden" name="next" value="{{ next }}" style="color: #F0DDAB;">
+      <button type="submit" class="submit-link waves-effect waves-light btn">Log In</button>
+    </form>
+</section>
 {% endblock %}

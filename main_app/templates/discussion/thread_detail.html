@@ -1,29 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h3>{{ thread.title }}</h3>
-  <p>{{ thread.description }}</p>
-  <label>Created by {{ thread.author }} on {{ thread.created_at }}</label>
+  <div class="thread_detail_page">
+    <h3>{{ thread.title }}</h3>
+    <p>{{ thread.description }}</p>
+    <label>Created by {{ thread.author }} on {{ thread.created_at }}</label>
 
-  <h4>Comments</h4>
-  <ul>
-    {% for comment in comments %}
-      <li>
-        <p>{{ comment.comment }}</p>
-        <p>by {{ comment.user }} on {{ comment.created_at }}</p>
-        <a href="{% url 'comment_detail' comment.pk %}"><button class="waves-effect waves-light btn blue_button">View Comment</button></a>
-        <a href="{% url 'edit_comment' comment.pk %}"><button class="waves-effect waves-light btn blue_button">Edit</button></a>
-        <a href="{% url 'delete_comment' comment.pk %}"><button class="waves-effect waves-light btn blue_button">Delete</button></a>
-      </li>
-    {% empty %}
-      <li>No comments yet. Be the first to comment!</li>
-    {% endfor %}
-  </ul>
+    <h4>Comments</h4>
+    <ul>
+      {% for comment in comments %}
+        <li>
+          <p>{{ comment.comment }}</p>
+          <p>by {{ comment.user }} on {{ comment.created_at }}</p>
+          <a href="{% url 'comment_detail' comment.pk %}"><button class="waves-effect waves-light btn blue_button">View Comment</button></a>
+          <a href="{% url 'edit_comment' comment.pk %}"><button class="waves-effect waves-light btn blue_button">Edit</button></a>
+          <a href="{% url 'delete_comment' comment.pk %}"><button class="waves-effect waves-light btn blue_button">Delete</button></a>
+        </li>
+      {% empty %}
+        <li>No comments yet. Be the first to comment!</li>
+      {% endfor %}
+    </ul>
 
-  <h5>Add a Comment</h5>
-  <form method="post">
-    {% csrf_token %}
-    {{ comment_form.as_p }}
-    <button type="submit" class="waves-effect waves-light btn">Add Comment</button>
-  </form>
+    <h5>Add a Comment</h5>
+    <form method="post">
+      {% csrf_token %}
+      {{ comment_form.as_p }}
+      <button type="submit" class="waves-effect waves-light btn">Add Comment</button>
+    </form>
+  </div>
 {% endblock %}

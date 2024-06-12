@@ -2,9 +2,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Comment by {{ comment.user }}</h1>
+  <h4>Comment by {{ comment.user }}</h4>
   <p>{{ comment.comment }}</p>
   <p>Posted on: {{ comment.created_at }}</p>
-  <p>In thread: <a href="{% url 'thread_detail' comment.thread.pk %}">{{ comment.thread.title }}</a></p>
-  <a href="{% url 'thread_detail' comment.thread.pk %}">Back to Thread</a>
+  <p>In thread: <a href="{% url 'thread_detail' comment.thread.pk %}" style="color: #DDA84F;">{{ comment.thread.title }}</a></p>
+  <a href="{% url 'thread_detail' comment.thread.pk %}"><button class="waves-effect waves-light btn blue_button">Back to Thread</button></a>
 {% endblock %}

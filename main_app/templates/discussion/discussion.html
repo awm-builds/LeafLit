@@ -1,20 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
-<section class="discussion_page">
-    <h1>Discussion Board</h1>
+<section class="discussion_page center-align">
+    <h3>Discussion Board</h3>
 
-    <a href="{% url 'new_thread' %}" style="color: #DDA84F;">New Thread</a>
+    <a href="{% url 'new_thread' %}">
+        <button type="submit" class="waves-effect waves-light btn">New Thread</button>
+    </a>
 
-    <article>
-        <ul>
-            {% for thread in threads %}
-                <li>
-                    <a href="{% url 'thread_detail' thread.id %}" style="color: #DDA84F;">{{ thread.title }}</a>
-                    by {{ thread.user.username }}
-                    (Last updated: {{ thread.last_updated|date:"Y-m-d H:i:s" }})
-                </li>
-            {% endfor %}
-        </ul>
-    </article>
+    <div class="row">
+        {% for thread in threads %}
+        <div class="col s12 m8 offset-m2">
+            <div class="card discussion-card">
+                <div class="card-content">
+                    <span class="card-title">
+                        <a href="{% url 'thread_detail' thread.id %}" style="color: #DDA84F;">{{ thread.title }}</a>
+                    </span>
+                    <p>by {{ thread.user.username }}</p>
+                    <p>Last updated: {{ thread.last_updated|date:"D d/m/y h:i A" }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </section>
 {% endblock %}

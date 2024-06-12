@@ -1,3 +1,28 @@
+.marko-one-regular {
+    font-family: "Marko One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.aladin-regular {
+    font-family: "Aladin", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lily-script-one-regular {
+    font-family: "Lily Script One", system-ui;
+    font-weight: 200;
+    font-style: normal;
+    font-size: large;
+}
+
+.walter-turncoat-regular {
+    font-family: "Walter Turncoat", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
     background-color: #261D09;
     color: #F0DDAB;
@@ -5,10 +30,23 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, a, li {
     color: #F0DDAB;
+    font-family: "Marko One", serif;
 }
 
 a {
     color: #DDA84F;
+}
+
+input, textarea {
+    color: #F0DDAB;
+}
+
+input[name="title"] {
+    color: #F0DDAB;
+}
+
+textarea[name="comment"], textarea[name="description"] {
+    color: #F0DDAB;
 }
 
 .select-dropdown.dropdown-trigger {
@@ -25,6 +63,24 @@ a {
 
 svg.caret {
     fill: white
+}
+
+body:has(.signup_page) {
+    background-image: url('/static/images/background_bunnies.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+body:has(.login_page) {
+    background-image: url('/static/images/background_bunnies.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
 }
 
 body:has(.home-page) {
@@ -53,8 +109,26 @@ body:has(.book_search_page) {
     height: 100vh;
 }
 
+body:has(.book_detail_page) {
+    background-image: url('/static/images/background_vial.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
 body:has(.tea_page) {
     background-image: url('/static/images/background_mushrooms.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+body:has(.tea_detail_page) {
+    background-image: url('/static/images/background_tea.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -71,20 +145,28 @@ body:has(.discussion_page) {
     height: 100vh;
 }
 
-
-
-.container a:hover {
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: rgba(240, 221, 171, 0.5);
 }
 
-/* .home-page {
-    
-    /* height: 100vh; */
-    /* width: 100%;
-} */ 
+.center-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    list-style: none;
+}
 
-.nav-wrapper {
-    background-color: rgba(240, 221, 171, 0.7);
+.center-nav li {
+    margin: 0 15px;
+}
+
+.right {
+    display: flex;
+    list-style: none;
 }
 
 .heading {
@@ -96,40 +178,75 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100vw;
-    /* z-index: -100; */
+    z-index: -100;
 }
 
 footer p {
     color: white;
+    margin-right: 20px;
 }
 
+.home-login-card {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: rgba(100, 111, 64, 0.7);
+    border-radius: 10px;
+    border: 2px solid #F0DDAB;
+    padding: 20px;
+}
+
+.home-card-title {
+    color: #DDA84F;
+    margin: 0; 
+    padding: 0; 
+}
+
+.discussion_page .card.discussion-card .card-title a {
+    color: #DDA84F;
+    margin: 0; 
+    padding: 0; 
+}
+
+
 .book-card {
-/*
     display: flex;
-    flex-direction: row;
- above is a test */
+    justify-content: space-between;
+    align-items: center;
     background-color: rgba(124, 156, 154, 0.7);
     border-radius: 10px;
     padding: 10px;
-    max-width: 600px;
+    margin: 20px 0;
+    max-width: 500px;
 }
 
-/* Book card wrap ref
-.comicsContainer {
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+.book-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
-*/
+
+.text-content {
+    flex: 1;
+}
+
+.thumbnail-content {
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.thumbnail-content img {
+    max-height: 150px;
+    width: auto;
+}
 
 .tea-card {
-    max-height: 430px;
+    height: 500px;
     background-color: #B64129;
     border-radius: 10px;
     border: 2px solid #F0DDAB;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .tea-card:hover {
@@ -137,11 +254,46 @@ footer p {
     
 }
 
+.tea_detail_page .card.tea-card {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #B64129;
+    border-radius: 10px;
+    border: 2px solid #F0DDAB;
+    padding: 20px;
+}
+
+.tea_detail_page .card.tea-card .card-content {
+    min-height: 160px;
+}
+
 .card-content {
     min-height: 160px;
 }
 
 .inline_btn {
-/* display: inline-flex; */
     flex-direction: row;
+}
+
+.discussion_page .card.discussion-card {
+    max-width: 400px;
+    margin: 10px auto;
+    background-color: rgba(100, 111, 64, 0.7);
+    border-radius: 10px;
+    border: 2px solid #F0DDAB;
+    padding: 0px;
+    min-height: 1px;
+}
+
+.home-card-title {
+    color: #DDA84F;
+    margin: 0; 
+    padding: 0; 
+}
+
+.discussion_page .card.discussion-card p {
+    color: #F0DDAB;
+    margin: 0; 
+    padding: 0; 
+    line-height: 1.2; 
 }

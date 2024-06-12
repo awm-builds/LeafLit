@@ -1,9 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
 <section class="book_page">
+    <h3 style="margin: 30px 0 0">Book Search</h3>
+    <label>Utilizing Google Books API</label>
     <form action="{% url 'book_search' %}" method='GET'>
-        <input type="search" name="search" style="color: #F0DDAB;">
+        <input type="search" name="search" style="color: #F0DDAB; margin: 30px 0;">
         <button class="waves-effect waves-light btn" type="submit">Search</button>
     </form>
+    <h4 style="margin-top: 50px; text-align: center;">
+        Coming Soon:<br>
+        Featured Book Selections<br>
+        & Book Club Discussions
+    </h4>
 </section>
 {% endblock %}

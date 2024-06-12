@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
+<section class="signup_page">
+  <h3>Sign Up</h3>
 
-<h1>Sign Up</h1>
+  <p class="red-text">{{ error_message }}</p>
 
-<p class="red-text">{{ error_message }}</p>
-
-<form method="POST" action="{% url 'signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" class="btn" value="Sign Up" style="color: #F0DDAB;">
-</form>
-
+  <form method="POST" action="{% url 'signup' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="submit-link waves-effect waves-light btn blue_button" value="Sign Up">
+  </form>
+</section>
 {% endblock %}

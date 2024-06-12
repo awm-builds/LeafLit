@@ -4,10 +4,35 @@
 
 {% block content %}
   <div class="home-page section">
-    <div class="container">
-      <h3>About Leaf Lit</h3>
+    <div class="container" style="text-align: center;">
+      {% if user.is_authenticated %}
+      <h3>Welcome to Leaf Lit</h3>
       <hr>
-      <p>Join Leaf Lit!</p>
+      <div class="home-login-card">
+      <p>
+      We are passionate about tea and books and are here to create a virtual space where you can enjoy both.<br>
+      <br>
+      Our mission is to develop a virtual tea house community that offers tranquility, companionship, and a touch of tech elegance. <br>
+      <br>
+      Our love for cozy moments inspired us to build a delightful tea house community, brewing the perfect blend of technology and relaxation. <br>
+      <br>
+      <br>
+      <span class="card-title" style="color: #DDA84F; font-weight: bold; font-size: large;">
+      Join us:<br>
+      </span>
+      Select from the navigation bar above to explore the special experiences that Leaf Lit has to offer.<br></p>
+      </p>
+
+      </div>
+
+      {% else %}
+      <h3>Welcome to Leaf Lit</h3>
+      <hr>
+      <p>A cozy corner for book lovers and tea aficionados<br>
+        <br>
+        Discover, share and enjoy books and teas with a community of enthusiasts!
+      </p>
+      {% endif %}
     </div>
   </div>
 {% endblock %}

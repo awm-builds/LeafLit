@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>{% if comment_form.instance.pk %}{% if is_delete %}Delete{% else %}Edit{% endif %}{% else %}Add{% endif %} Comment</h1>
+  <h4>{% if comment_form.instance.pk %}{% if is_delete %}Delete{% else %}Edit{% endif %}{% else %}Add{% endif %} Comment</h4>
   <div class="container">
     <div>
       <form method="post">

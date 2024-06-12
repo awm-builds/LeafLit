@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>{{ thread.title }}</h1>
+  <h3>{{ thread.title }}</h3>
   <p>{{ thread.description }}</p>
-  <p>Created by {{ thread.author }} on {{ thread.created_at }}</p>
+  <label>Created by {{ thread.author }} on {{ thread.created_at }}</label>
 
-  <h2>Comments</h2>
+  <h4>Comments</h4>
   <ul>
     {% for comment in comments %}
       <li>
@@ -20,7 +20,7 @@
     {% endfor %}
   </ul>
 
-  <h2>Add a Comment</h2>
+  <h5>Add a Comment</h5>
   <form method="post">
     {% csrf_token %}
     {{ comment_form.as_p }}

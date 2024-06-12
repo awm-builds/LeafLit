@@ -8,7 +8,7 @@ After signing up, users can search for thier favorite books, explore different t
 
 ## Screenshots
 
-<section>
+<section style="display: flex; justify-content: center;">
     <img src="https://onedrive.live.com/embed?resid=B3BE4823163C1D5B%21218&authkey=%21AESgI2lEdnoC4rI&width=455&height=685" height="450px" width="auto" style="display: inline-block; margin: 2rem;">
     <img src="https://onedrive.live.com/embed?resid=B3BE4823163C1D5B%21222&authkey=%21AIsOrhtrIrGwKVQ&width=453&height=684" height="450px" width="auto" style="display: inline-block; margin: 2rem;">
     <img src="https://onedrive.live.com/embed?resid=B3BE4823163C1D5B%21219&authkey=%21AJEcAXkWy1Gxj2k&width=457&height=685" height="450px" width="auto" style="display: inline-block; margin: 2rem;">

@@ -71,7 +71,7 @@ def book_detail(request, api_id):
   else:
     # Look up book from API
     response = requests.get(f'https://www.googleapis.com/books/v1/volumes/{api_id}?key={API_KEY}')
-    print(response.json())
+    # print(response.json())
     data = response.json()['volumeInfo']
     # Add book to database
     book = Book.objects.create(

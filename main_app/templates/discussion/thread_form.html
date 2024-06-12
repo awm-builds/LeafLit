@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h3>{% if thread_form.instance.pk %}Edit{% else %}Create{% endif %} Thread</h3>
-  <form method="post">
-    {% csrf_token %}
-    {{ thread_form.as_p }}
-    <button type="submit" class="waves-effect waves-light btn">{% if thread_form.instance.pk %}Save{% else %}Create{% endif %} Thread</button>
-    <a href="{% url 'discussion' %}"><button class="waves-effect waves-light btn">Cancel</button></a>
-  </form>
-
+  <div class="thread_form_page">
+    <h3>{% if thread_form.instance.pk %}Edit{% else %}Create{% endif %} Thread</h3>
+    <form method="post">
+      {% csrf_token %}
+      {{ thread_form.as_p }}
+      <button type="submit" class="waves-effect waves-light btn">{% if thread_form.instance.pk %}Save{% else %}Create{% endif %} Thread</button>
+    </form>
+    <a href="{% url 'discussion' %}"><button class="waves-effect waves-light btn" style="margin-block-start: 1em;">Cancel</button></a>
+  </div>
 {% endblock %}

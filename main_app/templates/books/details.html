@@ -2,12 +2,22 @@
 
 {% block content %}
 <section class="book_search_page">
-<h3>{{ book.title }}</h3>
-<p>Author: {{ book.author }}</p>
-<p>Description: {{ book.description|safe }}</p>
-<p>Page Count: {{ book.page_count }}</p>
-<p><img src="{{ book.image }}" alt="book cover"/></p>
+<div class="container">
+    <div>
+        <h3>{{ book.title }}</h3>
+    </div>
+    <div>
+        <p>Author: {{ book.author }}</p>
+    </div>
+    <div class="book-desc-img">
+        <img class="book-img-float" src="{{ book.image }}" alt="book cover"/>
+        <div class="book-detail-desc">Description:<br> {{ book.description|safe }}</div>
+    </div>
+    <div>
+        <p>Page Count: {{ book.page_count }}</p>
+    </div>
+    <a href="{% url 'books' %}"><button class="waves-effect waves-light btn">Back to All Books</button></a>
+</div>
 
-<a href="{% url 'books' %}">Back to All Books</a>
 </section>
 {% endblock %}

@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="comment_form_page">
   <h4>{% if comment_form.instance.pk %}{% if is_delete %}Delete{% else %}Edit{% endif %}{% else %}Add{% endif %} Comment</h4>
   <div class="container">
     <div>
@@ -17,4 +18,5 @@
         
     </div>
   </div>
+</div>
 {% endblock %}

@@ -145,6 +145,42 @@ body:has(.discussion_page) {
     height: 100vh;
 }
 
+body:has(.thread_detail_page) {
+    background-image: url('/static/images/background_face.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+body:has(.thread_form_page) {
+    background-image: url('/static/images/background_face.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+body:has(.comment_detail_page) {
+    background-image: url('/static/images/background_face.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+body:has(.comment_form_page) {
+    background-image: url('/static/images/background_face.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
@@ -224,6 +260,16 @@ footer p {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+.book-img-float {
+    float: right;
+    margin-left: 20px;
+}
+
+.book-detail-desc {
+    padding-right: 10px;
+    text-align: left;
 }
 
 .text-content {

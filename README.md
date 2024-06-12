@@ -5,19 +5,10 @@
 The Leaf Lit App is a web application designed to provide users with information about books and their pairings with various types of tea.
 After signing up, users can search for thier favorite books, explore different tea varieties, and discuss their pairings with the community. Exploring different books and teas recommended by the community allows the user to learn and add to the discussion. A user can also create a discussion thread to share with the community. Leaf Lit's list of Teas display characteristics of each helping the user discover new favorites. Whether you're a seasoned tea enthusiast or just starting to explore the world of tea, this app has something for everyone.
 
-<style>
-    #img-wrapper {
-        display: flex;
-        justify-content: center;
-    }
 
-    #img-wrapper img {
-        margin: 2rem;
-    }
-    
-</style>
+## Screenshots
 
-<section id="img-wrapper">
+<section>
     <img src="https://onedrive.live.com/embed?resid=B3BE4823163C1D5B%21222&authkey=%21AIsOrhtrIrGwKVQ&width=453&height=684" height="450px" width="auto" style="display: inline-block; margin: 2rem;">
     <img src="https://onedrive.live.com/embed?resid=B3BE4823163C1D5B%21219&authkey=%21AJEcAXkWy1Gxj2k&width=457&height=685" height="450px" width="auto" style="display: inline-block; margin: 2rem;">
     <img src="https://onedrive.live.com/embed?resid=B3BE4823163C1D5B%21218&authkey=%21AESgI2lEdnoC4rI&width=455&height=685" height="450px" width="auto" style="display: inline-block; margin: 2rem;">

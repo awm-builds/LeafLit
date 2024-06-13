@@ -23,6 +23,7 @@ After signing up, users can search for thier favorite books, explore different t
 </section>
 
 ## [Leaf Lit Landing Page](https://leaflit-3bc5fa4fe5ca.herokuapp.com/)
+- HTML
 - CSS3
 - JavaScript
 - Python

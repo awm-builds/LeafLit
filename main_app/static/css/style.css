@@ -343,3 +343,559 @@ footer p {
     padding: 0; 
     line-height: 1.2; 
 }
+
+/* Modern Tea Page Styles */
+.tea_page {
+    background: linear-gradient(135deg, rgba(240, 221, 171, 0.1) 0%, rgba(182, 65, 41, 0.1) 100%);
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.tea-page-title {
+    font-size: 2.5rem;
+    color: #B64129;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.tea-page-subtitle {
+    color: #646f40;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    opacity: 0.8;
+}
+
+/* Enhanced Filter Section */
+.tea-filter-section {
+    background: linear-gradient(135deg, rgba(100, 111, 64, 0.9) 0%, rgba(220, 168, 79, 0.9) 100%);
+    border-radius: 20px;
+    padding: 2.5rem 2rem 3rem 2rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(240, 221, 171, 0.4);
+    position: relative;
+    z-index: 2000;
+    height: 62px;
+    overflow: visible;
+    max-width: 300px;
+    margin: 0 auto 4rem auto;
+}
+
+.tea-filter-section::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(135deg, rgba(240, 221, 171, 0.1) 0%, rgba(182, 65, 41, 0.1) 100%);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.tea-filter-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.tea-filter-form {
+    margin: 0;
+    position: relative;
+    z-index: 2001;
+}
+
+.filter-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    min-height: 80px;
+}
+
+.filter-wrapper .input-field {
+    flex: 0 0 auto;
+    min-width: 185px;
+    max-width: 250px;
+    width: 120px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2002;
+}
+
+.tea-type-select {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(240, 221, 171, 0.8);
+    border-radius: 15px;
+    padding: 1.2rem 1rem;
+    font-size: 1.1rem;
+    color: #333;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2003;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.tea-type-select:focus {
+    border-color: #DDA84F;
+    box-shadow: 0 0 0 4px rgba(220, 168, 79, 0.3), 0 8px 25px rgba(0,0,0,0.15);
+    background: white;
+    outline: none;
+    z-index: 2004;
+    transform: translateY(-2px);
+}
+
+/* Materialize select dropdown specific styles */
+.tea-filter-section .dropdown-content {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    border: 2px solid rgba(240, 221, 171, 0.6);
+    z-index: 2010 !important;
+    max-height: 320px;
+    overflow-y: auto;
+    position: absolute !important;
+    margin-top: 0;
+    min-width: 220px;
+    max-width: 250px;
+    width: 120px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tea-filter-section .dropdown-content li {
+    transition: all 0.3s ease;
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(240, 221, 171, 0.2);
+}
+
+.tea-filter-section .dropdown-content li:last-child {
+    border-bottom: none;
+}
+
+.tea-filter-section .dropdown-content li:hover,
+.tea-filter-section .dropdown-content li.selected {
+    background: linear-gradient(135deg, rgba(220, 168, 79, 0.25) 0%, rgba(100, 111, 64, 0.25) 100%);
+    color: #646f40;
+    transform: translateX(5px);
+}
+
+.tea-filter-section .dropdown-content li > span {
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.tea-filter-section .select-wrapper {
+    position: relative;
+    z-index: 2005;
+}
+
+.tea-filter-section .select-wrapper .caret {
+    color: #646f40;
+    z-index: 2004;
+    right: 15px;
+    font-size: 1.2rem;
+}
+
+.tea-filter-section .select-wrapper input.select-dropdown {
+    background: transparent;
+    border: none;
+    color: #333;
+    font-size: 1.1rem;
+    padding-right: 40px;
+}
+
+.filter-label {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.active-filter {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.filter-tag {
+    background: linear-gradient(135deg, #DDA84F 0%, #B64129 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.clear-filter {
+    color: white;
+    text-decoration: none;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.clear-filter:hover {
+    background: rgba(255,255,255,0.45);
+    transform: scale(1.15);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Modern Tea Grid */
+.tea-grid-container {
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.tea-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.tea-card-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.tea-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.modern-tea-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.modern-tea-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent 0%, rgba(182, 65, 41, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.modern-tea-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(182, 65, 41, 0.2);
+    z-index: 10;
+}
+
+.modern-tea-card:hover::before {
+    opacity: 1;
+}
+
+.tea-card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #F0DDAB 0%, #DDA84F 100%);
+}
+
+.tea-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.modern-tea-card:hover .tea-image {
+    transform: scale(1.1);
+}
+
+.tea-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #F0DDAB 0%, #DDA84F 100%);
+}
+
+.tea-icon {
+    font-size: 4rem;
+    opacity: 0.7;
+}
+
+.tea-type-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(182, 65, 41, 0.9);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+
+.tea-card-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+.tea-name {
+    color: #B64129;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+}
+
+.tea-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+.tea-card-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.learn-more {
+    color: #B64129;
+    font-weight: 500;
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.modern-tea-card:hover .learn-more {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Empty State */
+.no-teas-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 400px;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.empty-state h4 {
+    color: #B64129;
+    margin-bottom: 1rem;
+}
+
+.empty-state p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tea-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .filter-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .tea-page-title {
+        font-size: 2rem;
+    }
+    
+    .tea-filter-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tea_page {
+        padding: 1rem 0;
+    }
+    
+    .tea-filter-section {
+        margin: 0 1rem 2rem;
+        padding: 1rem;
+    }
+    
+    .tea-grid-container {
+        padding: 0 0.5rem;
+    }
+}
+
+/* Legacy tea-card styles override for new design */
+.tea_page .tea-card {
+    height: auto;
+    background: white;
+    border: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.tea_page .tea-card:hover {
+    background: white;
+}
+
+/* Additional z-index overrides for dropdown visibility */
+.tea-filter-section .select-dropdown {
+    z-index: 2015 !important;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border: 2px solid rgba(240, 221, 171, 0.6);
+    position: absolute !important;
+    min-width: 220px;
+    max-width: 250px;
+    width: 120px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tea-filter-section .select-dropdown li {
+    padding: 12px 16px;
+    transition: all 0.2s ease;
+}
+
+.tea-filter-section .select-dropdown li:hover,
+.tea-filter-section .select-dropdown li.selected {
+    background: linear-gradient(135deg, rgba(220, 168, 79, 0.2) 0%, rgba(100, 111, 64, 0.2) 100%);
+    color: #646f40;
+}
+
+/* Ensure the dropdown appears above tea cards */
+.tea-grid-container {
+    position: relative;
+    z-index: 1;
+}
+
+.modern-tea-card {
+    position: relative;
+    z-index: 1;
+}
+
+/* Override any conflicting z-index from Materialize */
+.tea_page .dropdown-content {
+    z-index: 2020 !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 12px !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
+    border: 2px solid rgba(240, 221, 171, 0.6);
+    position: absolute !important;
+    min-width: 220px !important;
+    max-width: 250px !important;
+    width: 120px !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.tea_page .dropdown-content li > span {
+    color: #333 !important;
+    font-weight: 500;
+}
+
+/* Force dropdown to be on top of everything */
+.tea_page .input-field .dropdown-content {
+    z-index: 2025 !important;
+    position: absolute !important;
+    min-width: 220px !important;
+    max-width: 250px !important;
+    width: 120px !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.tea_page .select-wrapper + .dropdown-content {
+    z-index: 2030 !important;
+    position: absolute !important;
+    min-width: 220px !important;
+    max-width: 250px !important;
+    width: 220px !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}

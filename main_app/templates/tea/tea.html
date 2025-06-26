@@ -2,36 +2,86 @@
 {% block content %}
 <section class="tea_page">
   <div class="container">
-    <h3>Tea List</h3>
-    <form method="GET" action="{% url 'tea' %}">
-      <div class="input-field col s12">
-        <select name="type" onchange="this.form.submit()" class="white-text">
-          <option value="" {% if not tea_type %}selected{% endif %}>All</option>
-          {% for type in tea_types %}
-            <option value="{{ type }}" {% if tea_type == type %}selected{% endif %}>{{ type }}</option>
-          {% endfor %}
-        </select>
-        <label>Filter by Type</label>
-      </div>
-    </form>
-  </div>
-  <div class="container">
-    <div class="row">
-      {% for tea in teas %}
-        <div class="col s4 m4">
-          <a href="{% url 'tea_detail' tea.id %}" class="card-link">
-            <div class="card tea-card" style="background-color: #B64129;">
-              <div class="card-image" style="color: #DDA84F;">
-                <img src="{{ tea.image_url }}" alt="{{ tea.name }}">
-              </div>
-              <div class="card-content">
-                <span class="card-title" style="color: #DDA84F;">{{ tea.name }}</span>
-                <p>{{ tea.description|truncatewords:20 }}</p>
-              </div>
+    <div class="page-header">
+      <h3 class="tea-page-title">🍵 Tea Collection</h3>
+      <p class="tea-page-subtitle">Discover your perfect brew from our curated selection</p>
+    </div>
+    
+    <!-- Enhanced Filter Section -->
+    <div class="tea-filter-section">
+      <form method="GET" action="{% url 'tea' %}" class="tea-filter-form">
+        <div class="filter-wrapper">
+          <div class="input-field">
+            <select name="type" onchange="this.form.submit()" class="tea-type-select">
+              <option value="" {% if not tea_type %}selected{% endif %}>🌿 All Teas</option>
+              {% for type in tea_types %}
+                <option value="{{ type }}" {% if tea_type == type %}selected{% endif %}>
+                  {% if type == "Black" %}⚫ {{ type }}
+                  {% elif type == "Green" %}🟢 {{ type }}
+                  {% elif type == "White" %}⚪ {{ type }}
+                  {% elif type == "Oolong" %}🟡 {{ type }}
+                  {% elif type == "Herbal" %}🌺 {{ type }}
+                  {% else %}🍃 {{ type }}
+                  {% endif %}
+                </option>
+              {% endfor %}
+            </select>
+            <label class="filter-label">Filter by Tea Type</label>
+          </div>
+          {% if tea_type %}
+            <div class="active-filter">
+              <span class="filter-tag">
+                Showing: {{ tea_type }} teas
+                <a href="{% url 'tea' %}" class="clear-filter">✕</a>
+              </span>
             </div>
-          </a>
+          {% endif %}
         </div>
-      {% endfor %}
+      </form>
+    </div>
+
+    <!-- Tea Grid -->
+    <div class="tea-grid-container">
+      {% if teas %}
+        <div class="tea-grid">
+          {% for tea in teas %}
+            <div class="tea-card-wrapper">
+              <a href="{% url 'tea_detail' tea.id %}" class="tea-card-link">
+                <div class="tea-card modern-tea-card">
+                  <div class="tea-card-image">
+                    {% if tea.image_url %}
+                      <img src="{{ tea.image_url }}" alt="{{ tea.name }}" class="tea-image">
+                    {% else %}
+                      <div class="tea-placeholder">
+                        <span class="tea-icon">🍵</span>
+                      </div>
+                    {% endif %}
+                    <div class="tea-type-badge">{{ tea.type }}</div>
+                  </div>
+                  <div class="tea-card-content">
+                    <h4 class="tea-name">{{ tea.name }}</h4>
+                    <p class="tea-description">{{ tea.description|truncatewords:15 }}</p>
+                    <div class="tea-card-footer">
+                      <span class="learn-more">Learn More →</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="no-teas-found">
+          <div class="empty-state">
+            <span class="empty-icon">🔍</span>
+            <h4>No teas found</h4>
+            <p>{% if tea_type %}No {{ tea_type }} teas match your criteria.{% else %}No teas available at the moment.{% endif %}</p>
+            {% if tea_type %}
+              <a href="{% url 'tea' %}" class="btn waves-effect waves-light">View All Teas</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
     </div>
   </div>
 </section>

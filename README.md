@@ -13,25 +13,25 @@ Whether you're a bibliophile seeking the perfect brew to accompany your next rea
 
 <div align="center">
   <h3>🏠 Home & Navigation</h3>
-  <img src="https://onedrive.live.com/embed?resid=B3BE4823163C1D5B%21218&authkey=%21AESgI2lEdnoC4rI&width=455&height=685" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <img src="https://onedrive.live.com/embed?resid=B3BE4823163C1D5B%21222&authkey=%21AIsOrhtrIrGwKVQ&width=453&height=684" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="main_app/static/images/RM_Home_page1.JPG" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="main_app/static/images/RM_Home_page2.JPG" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   
   <h3>📚 Book Discovery & Details</h3>
-  <img src="https://onedrive.live.com/embed?resid=B3BE4823163C1D5B%21219&authkey=%21AJEcAXkWy1Gxj2k&width=457&height=685" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <img src="https://onedrive.live.com/embed?resid=B3BE4823163C1D5B%21213&authkey=%21ADLtFVRGkAAocA8&width=451&height=684" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="main_app/static/images/RM_Search_page.JPG" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="main_app/static/images/RM_Book_details_page.JPG" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   
   <h3>🍵 Tea Collection & Insights</h3>
-  <img src="https://onedrive.live.com/embed?resid=B3BE4823163C1D5B%21221&authkey=%21AG7HTGc-pB4W12w&width=452&height=686" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <img src="https://onedrive.live.com/embed?resid=B3BE4823163C1D5B%21215&authkey=%21AE-Onk0BqrsoKxY&width=455&height=682" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="main_app/static/images/RM_Tea_List_Page.png" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="main_app/static/images/RM_Book_search_page2.JPG" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   
   <h3>💬 Community Discussion</h3>
-  <img src="https://onedrive.live.com/embed?resid=B3BE4823163C1D5B%21223&authkey=%21AIASHcdanAi0urY&width=451&height=686" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <img src="https://onedrive.live.com/embed?resid=B3BE4823163C1D5B%21217&authkey=%21ACIZnIntNUrmQn4&width=453&height=684" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="main_app/static/images/RM_Discussion_Page.png" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="main_app/static/images/RM_Discussion_Details_page.JPG" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   
   <h3>👤 User Experience</h3>
-  <img src="https://onedrive.live.com/embed?resid=B3BE4823163C1D5B%21216&authkey=%21AEP5CyG8ELb_Hrc&width=450&height=683" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <img src="https://onedrive.live.com/embed?resid=B3BE4823163C1D5B%21214&authkey=%21AF3osHcQeT0nOUU&width=454&height=682" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <img src="https://onedrive.live.com/embed?resid=B3BE4823163C1D5B%21224&authkey=%21ACWkOSZpytqGWeE&width=455&height=683" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="main_app/static/images/RM_login_form_page.JPG" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="main_app/static/images/RM_signup_form_page.JPG" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="main_app/static/images/RM_Thread_form_page.JPG" height="400px" width="auto" style="margin: 1rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </div>
 
 ## 🛠️ Technology Stack

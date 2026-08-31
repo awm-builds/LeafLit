@@ -1,5 +1,11 @@
 # 🍃 Leaf Lit: The Literary Tea Companion
 
+## ⚠️ Deployment Update — August 2026
+Leaf Lit is currently undergoing a full deployment modernization.  
+The previous **Heroku** environment has been sunset, and the application is now being **Dockerized and migrated to Fly.io** for long‑term stability and reproducible infrastructure.
+
+The live link is temporarily offline during this transition, but the **full codebase remains available**, and an updated deployment will be published this week.
+
 ## Overview
 
 Leaf Lit is an innovative web application that elegantly bridges the worlds of literature and tea culture. This sophisticated platform empowers users to discover the perfect harmony between their favorite literary works and carefully curated tea selections.
